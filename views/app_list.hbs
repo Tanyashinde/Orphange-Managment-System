@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <img src="http://localhost:3000/images/logo2.png" class="img-fluid"></img>
+    <style>
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #C21807;
+            height: 50px;
+            margin-left: 500px;
+            align-content: center;
+            align-self: baseline;
+        }
+
+        .button1:hover {
+            background-color: #C21807;
+            color: white;
+        }
+
+        input[type=submit] {
+            background-color: #C21807;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 450px;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            height:400px;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <center>
+        <font size="5" color="#C21807">
+            <i>
+                <b>APPROVE APPOINTMENTS</b>
+            </i>
+        </font>
+    </center>
+    <form method="post" action="/approve">
+        <div class="container">
+            {{#each app_list}}
+            <input type="checkbox" name="name" value="{{name}}" class="checks"> {{name}}&nbsp;&nbsp;&nbsp; {{phone}}&nbsp;&nbsp;&nbsp;{{reason}}&nbsp;&nbsp;&nbsp;{{date}}
+            <br> {{/each}}
+        </div>
+        <br>
+        <center>
+            <input type="submit" value="Approve" name="submit" />
+        </center>
+
+    </form>
+    <script>
+
+    </script>
+
+</body>
+
+</html>

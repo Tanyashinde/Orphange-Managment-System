@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: maroon;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        input[type=submit] {
+            background-color: #C21807;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 450px;
+            margin-left: 60px;
+        }
+    </style>
+    <script type="text/javascript">
+        
+        function ValidateEmail(email) {
+            var location = email.indexOf('@')
+            var location1 = email.indexOf('.')
+            if (location == -1 || location1 == -1) {
+                alert('Invalid Email')
+            }
+        }
+        function phonenumber(inputtxt) {
+            var phoneno = /^\d{10}$/;
+            if (inputtxt.value.match(phoneno)) {
+                return true;
+            }
+            else {
+                alert("Not a valid Phone Number");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <font size="5">Kindly fill Your details</font>
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    <font size="3" color="grey">Cheque needed, our rep will visit you</font>
+
+    <div class="container">
+        <form name="Form"  method= "post" action="/myaction">
+            <input type="text" id="fname" name="name" placeholder="Name*" required>
+            <br>
+            <input type="text" id="phone" name="phone" placeholder="Contact No.*" required>
+            <br>
+            <input type="text" id="lname" name="email" placeholder="Email*" onblur="ValidateEmail(this.value)" required>
+            <br>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Country*</option>
+                <option value="australia">INDIA</option>
+                <option value="canada">CANADA</option>
+                <option value="usa">USA</option>
+            </select>
+            <textarea id="address" name="address" placeholder="Address*" style="height:50px" required></textarea>
+            <input type="text" id="lname" name="city" placeholder="City*" required>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>what inspired you to give?*</option>
+                <option value="googlesearch">google search</option>
+                <option value="email">email</option>
+                <option value="phonecall">phonecall</option>
+                <option value="youtube">youtube</option>
+            </select>
+            <br>
+            <input type="text" id="lname" name="amount" placeholder="please enter amount*" required>
+            <br>
+            <input type="checkbox" name="terms" value="terms"> I would like to subscribe to the e-newsletter of Save the Children, which includes updates on work done by Hope
+            For The children Foundation
+            <br>
+            <br>
+          <input type="submit" value="DONATE NOW" name="submit" onclick="phonenumber(document.Form.phone)" />
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>

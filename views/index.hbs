@@ -1,0 +1,203 @@
+<html>
+
+<head>
+    <style>
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #C21807;
+            height: 50px;
+            margin-left: 500px;
+            align-content: center;
+        }
+
+        .button1:hover {
+            background-color: #C21807;
+            color: white;
+        }
+
+        .button2 {
+            background-color: white;
+            color: black;
+            border: 2px solid #C21807;
+            height: 50px;
+            align-content: center;
+        }
+
+        .button2:hover {
+            background-color: #C21807;
+            color: white;
+        }
+
+        .button3 {
+            background-color: white;
+            color: black;
+            border: 2px solid #C21807;
+            height: 50px;
+            width: 400px;
+            align-content: center;
+        }
+
+        .button3:hover {
+            background-color: #C21807;
+            color: white;
+        }
+
+        form {
+            display: inline-block; //Or display: inline; 
+        }
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            height:290px;
+        }
+    </style>
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+    <img src="http://localhost:3000/images/logo2.png" class="img-fluid"></img>
+    <form method="POST" action="/appointment">
+        <button class="button button1">VISIT</button>
+    </form>
+    <form method="post" action="/admin">
+        <button class="button button2">ADMIN</button>
+    </form>
+
+    <form method="post" action="/profile">
+        <button class="button button2">USER PROFILE</button>
+    </form>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th style="height:30px;width:950px">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <img src="http://localhost:3000/images/home.jpg" class="img-fluid" height="500" width="900"></img>
+            </th>
+            <th>
+                <table>
+                    <tr>
+                        <th style="height:90px;width:50px">
+                            <img src="http://localhost:3000/images/i1.jpg" class="img-fluid" height="70" width="70"></img>
+                        </th>
+                        <th>
+                            1,70,70,000 children in India are out of school. Actual no. who don't get quality & enabling education is much higher
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="height:90px;width:50px">
+                            <img src="http://localhost:3000/images/i2.jpg" class="img-fluid" height="70" width="70"></img>
+                        </th>
+                        <th>
+                            An estimated 20,00,000 children are losing their childhood on streets of India
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="height:90px;width:50px">
+                            <img src="http://localhost:3000/images/i4.jpg" class="img-fluid" height="70" width="70"></img>
+                        </th>
+                        <th>
+                            13,40,000 children under 5 die each year in India due to preventable causes
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="height:90px;width:50px">
+                            <img src="http://localhost:3000/images/i5.jpg" class="img-fluid" height="90" width="90"></img>
+                        </th>
+                        <th>
+                            47% girls in India get married before they turn 18
+                        </th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th style="height:850px;width:50px">
+
+            </th>
+            <th>
+                <iframe src="/about" height="850" width="650" frameborder="0"></iframe>
+            </th>
+            <th style="height:850px;width:90px">
+
+            </th>
+            <th>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i>
+                    <font size="6" color="#C21807">BECOME A DONOR</font>
+                </i>
+                <iframe src="/donor" height="850" width="600"></iframe>
+            </th>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <center>
+        <b>
+            <font size="6" color="#C21807">
+                <i>HANDCARFT CREATIVITY BY CHILDREN</i>
+            </font>
+        </b>
+    </center>
+    <table>
+        <tr>
+            <th>
+                <div class="container">
+                    <img src="http://localhost:3000/images/shop1.jpg" height="270" width="227">
+                </div>
+            </th>
+            <th>
+                <div class="container">
+                    <img src="http://localhost:3000/images/shop2.jpg" height="270" width="227">
+                </div>
+            </th>
+            <th>
+                <div class="container">
+                    <img src="http://localhost:3000/images/shop3.jpg" height="270" width="227">
+                </div>
+            </th>
+            <th>
+                <div class="container">
+                    <img src="http://localhost:3000/images/shop4.jpg" height="270" width="227">
+                </div>
+            </th>
+            <th>
+                <div class="container">
+                    <img src="http://localhost:3000/images/shop5.jpg" height="270" width="227">
+                </div>
+            </th>
+        </tr>
+    </table>
+    <br>
+    <CENTER>
+        <a href="/shop"><button class="button button3">BUY NOW</button></a>
+    </CENTER>
+</body>
+
+
+</html>

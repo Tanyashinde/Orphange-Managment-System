@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <style>
+         input[type=submit] {
+            background-color: #C21807;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 150px;
+            margin-left: 60px;
+        }
+
+        
+    </style>
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+    <img src="http://localhost:3000/images/logo2.png" class="img-fluid"></img>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <table>
+        <tr>
+        {{#each items}}
+        <td>
+            <form method="post" action="/delete_item">
+                <div class="container">
+                    <input type="hidden" id="{{id}}" name="shop" value="{{id}}">
+                    <img src="{{image}}" height="200" width="250">
+                    <div class="caption">
+                        <b>
+                            <p>{{price}}RS</p>
+                        </b>
+                    <input type="submit" value="delete item"></button>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </form>
+        </td>
+        {{/each}}
+        </tr>
+    </table>
+    <hr>
+    <form name="Form"  method= "post" action="/place_order">
+        <center>
+        <input type="text" id="price" name="price"  value="{{total}}" placeholder="Total Amount.*" required>
+            <br><br>
+          <input type="submit" value="PLACE ORDER" name="submit"/>
+          </center>
+        </form>
+</body>
+
+</html>
