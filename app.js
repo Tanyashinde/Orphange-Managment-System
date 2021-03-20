@@ -44,6 +44,9 @@ con.connect(function (err) {
 
 });
 
+var a=10;
+//hello world
+
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 // view engine setup
