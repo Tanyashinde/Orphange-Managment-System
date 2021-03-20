@@ -44,6 +44,9 @@ con.connect(function (err) {
 
 });
 
+var b = 11;
+// hello world 2
+
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 // view engine setup
